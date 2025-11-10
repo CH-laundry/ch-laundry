@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>C.H 精緻洗衣 - 板橋專業洗鞋洗包洗衣服務 | 到府收送 | 新北洗衣推薦</title>
+    <meta name="title" content="C.H 精緻洗衣 - 板橋專業洗鞋洗包洗衣服務 | 到府收送">
+    <meta name="description" content="C.H精緻洗衣是板橋地區最專業的洗衣服務!專精洗鞋、洗包包、洗衣物、安全座椅清潔。服務板橋、新莊、土城、中和、永和、雙和。營業時間10:30-20:00,週六公休。電話02-2255-8686">
+    <meta name="keywords" content="板橋洗鞋,板橋洗包包,板橋洗衣,新北洗鞋,鞋子清潔保養,名牌包清潔,安全座椅清潔,嬰兒推車清洗,到府收送洗衣,專業洗衣服務,板橋乾洗,新莊洗衣,土城洗衣,中和洗衣,永和洗衣">
+    <meta name="author" content="C.H 精緻洗衣">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chlaundryshop.com/">
+    <meta property="og:title" content="C.H 精緻洗衣 - 板橋最專業的洗鞋洗包洗衣服務">
+    <meta property="og:description" content="板橋地區最專業!洗鞋、洗包包、洗衣物、安全座椅清潔。品質保證、服務迅速、效率最高。電話02-2255-8686">
+    <meta property="og:image" content="https://chlaundryshop.com/storefront.jpg">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="TW-TPH">
+    <meta name="geo.placename" content="板橋區, 新北市">
+    <meta name="geo.position" content="25.011728;121.463734">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: -apple-system, 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .hero-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.85), rgba(30, 64, 175, 0.85));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero .subtitle { font-size: 1.5rem; margin-bottom: 1rem; }
+        .hero .description { font-size: 1.2rem; margin-bottom: 2rem; }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        /* Floating Buttons */
+        .line-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #06c755;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
+            z-index: 999;
+        }
+        
+        .call-floating-btn {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background: #34d399;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            z-index: 999;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+        
+        /* Blog Sidebar */
+        .blog-sidebar-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 2rem;
+            border-radius: 15px;
+            color: var(--white);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .blog-sidebar-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-link-btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .recent-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .recent-articles ul { list-style: none; }
+        .recent-articles li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .recent-articles li:before {
+            content: "📄";
+            position: absolute;
+            left: 0;
+        }
+        .recent-articles a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .service-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+        .service-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        
+        /* Video */
+        .video-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .video-container video { width: 100%; display: block; }
+        
+        /* Price */
+        .price-image-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .price-image-container img { width: 100%; display: block; }
+        
+        /* Location */
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .location-map iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .info-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-icon { font-size: 2rem; color: var(--primary-color); }
+        .info-content a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--text-dark), #111827);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #d1d5db; text-decoration: none; }
+        
+        .bg-light { background: #f9fafb; }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .two-column-layout { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                padding: 1rem;
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .location-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<!-- 📝 修改說明:
+1. 要改文字: 按 Ctrl+F 搜尋,直接修改
+2. 要換照片: 把新照片放到同資料夾,改檔名 (例如: storefront.jpg 改成 new-photo.jpg)
+3. 要換影片: 把新影片放到同資料夾,改檔名 (例如: promo-video.mp4 改成 new-video.mp4)
+4. 要改時間: 搜尋 "7-10天" 直接修改數字
+-->
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🧺 C.H 精緻洗衣</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#features">服務特色</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#pricing">價目表</a></li>
+                <li><a href="#video">影片介紹</a></li>
+                <li><a href="blog.html">洗衣專欄</a></li>
+                <li><a href="#location">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <a href="https://line.me/R/ti/p/@ch_wash" class="line-floating-btn" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="35" height="35">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+    </a>
+    <a href="tel:+886222558686" class="call-floating-btn">📞</a>
+
+    <section class="hero" id="home">
+        <img src="storefront.jpg" alt="C.H 精緻洗衣店面" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>板橋最專業的洗衣服務</h1>
+            <p class="subtitle">⭐ 品質第一 ⭐ 服務至上 ⭐ 效率最高 ⭐</p>
+            <p class="description">專精洗鞋・洗包包・洗衣物・安全座椅清潔<br>服務板橋、新莊、土城、中和、永和、雙和</p>
+            <div>
+                <a href="https://line.me/R/ti/p/@ch_wash" class="btn btn-primary">💬 LINE 立即預約</a>
+                <a href="tel:+886222558686" class="btn btn-secondary">📞 02-2255-8686</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="features">
+        <h2 class="section-title">為什麼選擇 C.H 精緻洗衣?</h2>
+        <p class="section-subtitle">板橋地區口碑第一,客戶滿意度超過 4.9 分</p>
+        
+        <div class="two-column-layout">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>品質保證</h3>
+                    <p>專業設備與技術,每件物品都用心處理,確保最佳清潔效果</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>免費收送</h3>
+                    <p>板橋、新莊、土城、中和、永和、雙和地區免費到府收送</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>快速高效</h3>
+                    <p>標準清潔流程約7-10天完成,急件另外處理</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>價格透明</h3>
+                    <p>明碼標價,絕不亂加價,消費清楚有保障</p>
+                </div>
+            </div>
+
+            <div class="blog-sidebar">
+                <div class="blog-sidebar-card">
+                    <h3>📰 洗衣專欄</h3>
+                    <p>專業洗衣知識、保養秘訣、最新優惠活動,定期更新!</p>
+                    <a href="blog.html" class="blog-link-btn">查看所有文章 →</a>
+                    
+                    <div class="recent-articles">
+                        <h4>最新文章</h4>
+                        <ul>
+                            <li><a href="blog-article-1.html">如何正確保養名牌球鞋?</a></li>
+                            <li><a href="blog-article-2.html">精品包包清潔保養完全指南</a></li>
+                            <li><a href="blog-article-3.html">板橋洗鞋店怎麼選?5大關鍵</a></li>
+                            <li><a href="blog-article-4.html">白鞋發黃怎麼辦?</a></li>
+                            <li><a href="blog-article-5.html">安全座椅清潔保養時機</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container bg-light" id="services">
+        <h2 class="section-title">專業服務項目</h2>
+        <p class="section-subtitle">從鞋子、包包到衣物,我們都是專家</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">👟</div>
+                <h3>專業洗鞋服務</h3>
+                <p>運動鞋、球鞋、高級皮鞋、精品鞋款清潔保養。使用專業設備與清潔劑,不傷鞋面,還原如新。適用於各種材質:真皮、麂皮、網布、帆布等。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👜</div>
+                <h3>包包清潔保養</h3>
+                <p>名牌包、皮包、布包專業清潔與保養。針對不同材質提供客製化處理,包含除污、除臭、補色、防霉等服務,延長包包使用壽命。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👕</div>
+                <h3>衣物精緻洗護</h3>
+                <p>襯衫、西裝、大衣、羽絨衣等各類衣物乾洗水洗。專業去污技術,溫和不傷衣料,保持衣物原有質感與色澤。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚼</div>
+                <h3>嬰兒用品清潔</h3>
+                <p>安全座椅、嬰兒推車、遊戲床專業清潔消毒。使用嬰兒專用清潔劑,安全無毒,守護寶寶健康,讓爸媽安心。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪟</div>
+                <h3>居家布織品</h3>
+                <p>窗簾、地毯、沙發椅套、床單寢具專業清洗。深層去污除蟎,還原居家清新環境,提升生活品質。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧸</div>
+                <h3>特殊物品清潔</h3>
+                <p>玩偶、行李箱、帽子、圍巾等特殊物品清潔。依據材質特性提供專業處理,讓每樣物品都能煥然一新。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="video">
+        <h2 class="section-title">服務影片介紹</h2>
+        <p class="section-subtitle">看看我們如何用心處理每一件物品</p>
+        <div class="video-container">
+            <video controls preload="metadata" poster="storefront.jpg">
+                <source src="promo-video.mp4" type="video/mp4">
+                您的瀏覽器不支援影片播放。
+            </video>
+        </div>
+    </section>
+
+    <section class="container bg-light" id="pricing">
+        <h2 class="section-title">透明價目表</h2>
+        <p class="section-subtitle">明碼標價,消費清楚有保障</p>
+        <div class="price-image-container">
+            <img src="price-list.jpg" alt="C.H 精緻洗衣完整價目表">
+        </div>
+    </section>
+
+    <section class="container" id="location">
+        <h2 class="section-title">門市資訊</h2>
+        <p class="section-subtitle">歡迎來店參觀或來電預約到府收送</p>
+        <div class="location-container">
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.28!2d121.46154!3d25.011728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzQyLjIiTiAxMjHCsDI3JzQxLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h4>門市地址</h4>
+                        <p>新北市板橋區華江八路6號1樓</p>
+                        <a href="https://maps.google.com/?q=新北市板橋區華江八路6號1樓" target="_blank">Google 地圖導航</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-content">
+                        <h4>營業時間</h4>
+                        <p>週一到週日 10:30 - 20:00<br><strong>週六固定公休</strong></p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h4>預約電話</h4>
+                        <p><a href="tel:+886222558686">02-2255-8686</a></p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <div class="info-content">
+                        <h4>LINE 官方帳號</h4>
+                        <p><a href="https://line.me/R/ti/p/@ch_wash" target="_blank">@ch_wash</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>關於 C.H 精緻洗衣</h3>
+                <p>板橋地區最專業的洗衣服務,我們用心對待每一件物品,提供最優質的清潔保養服務。</p>
+            </div>
+            <div class="footer-section">
+                <h3>服務項目</h3>
+                <ul>
+                    <li><a href="#services">專業洗鞋</a></li>
+                    <li><a href="#services">包包清潔保養</a></li>
+                    <li><a href="#services">衣物精緻洗護</a></li>
+                    <li><a href="#services">安全座椅清潔</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>快速連結</h3>
+                <ul>
+                    <li><a href="#features">服務特色</a></li>
+                    <li><a href="#pricing">價目表</a></li>
+                    <li><a href="blog.html">洗衣專欄</a></li>
+                    <li><a href="#location">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>聯絡資訊</h3>
+                <ul>
+                    <li>📞 02-2255-8686</li>
+                    <li>💬 LINE: @ch_wash</li>
+                    <li>📧 ch.laundryshop@gmail.com</li>
+                    <li>📍 新北市板橋區華江八路6號1樓</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
