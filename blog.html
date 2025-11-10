@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洗衣專欄 - C.H 精緻洗衣</title>
+    <meta name="description" content="C.H 精緻洗衣專業洗衣知識、鞋子保養、包包清潔技巧分享">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Header */
+        .blog-header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-date {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content h2 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .blog-content p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .read-more:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1f2937, #111827);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-header h1 { font-size: 2rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🧺 C.H 精緻洗衣</a>
+            <ul class="nav-links">
+                <li><a href="index.html">返回首頁</a></li>
+                <li><a href="index.html#services">服務項目</a></li>
+                <li><a href="index.html#pricing">價目表</a></li>
+                <li><a href="index.html#location">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="blog-header">
+        <h1>📰 洗衣專欄</h1>
+        <p>專業洗衣知識 · 保養秘訣 · 清潔技巧分享</p>
+    </div>
+
+    <div class="container">
+        <div class="blog-grid">
+            <!-- 文章 1 -->
+            <article class="blog-card">
+                <div class="blog-image">👟</div>
+                <div class="blog-content">
+                    <p class="blog-date">2024年11月10日</p>
+                    <h2>如何正確保養名牌球鞋?專業洗鞋師的5大秘訣</h2>
+                    <p>名牌球鞋價格不菲,正確的清潔保養能讓鞋子壽命延長數倍。從 Nike、Adidas 到 New Balance,每種材質都有不同的保養方式。本文分享專業洗鞋師多年經驗...</p>
+                    <a href="blog-article-1.html" class="read-more">閱讀全文 →</a>
+                </div>
+            </article>
+
+            <!-- 文章 2 -->
+            <article class="blog-card">
+                <div class="blog-image">👜</div>
+                <div class="blog-content">
+                    <p class="blog-date">2024年11月8日</p>
+                    <h2>精品包包清潔保養完全指南 - LV、GUCCI、CHANEL</h2>
+                    <p>精品包包是許多人的心頭好,但您知道不同皮革材質需要不同的保養方法嗎?真皮、漆皮、帆布包的清潔方式大不同。讓專業包包保養師告訴您正確的清潔步驟...</p>
+                    <a href="blog-article-2.html" class="read-more">閱讀全文 →</a>
+                </div>
+            </article>
+
+            <!-- 文章 3 -->
+            <article class="blog-card">
+                <div class="blog-image">🏪</div>
+                <div class="blog-content">
+                    <p class="blog-date">2024年11月5日</p>
+                    <h2>板橋洗鞋店怎麼選?選擇專業洗衣店的5大關鍵</h2>
+                    <p>板橋地區洗鞋店眾多,但要如何選擇真正專業的洗鞋店呢?從設備、技術、價格到服務,我們整理出選擇洗鞋店的5大關鍵指標,讓您不再踩雷...</p>
+                    <a href="blog-article-3.html" class="read-more">閱讀全文 →</a>
+                </div>
+            </article>
+
+            <!-- 文章 4 -->
+            <article class="blog-card">
+                <div class="blog-image">✨</div>
+                <div class="blog-content">
+                    <p class="blog-date">2024年11月3日</p>
+                    <h2>白鞋發黃怎麼辦?4個方法讓白鞋恢復如新</h2>
+                    <p>白鞋穿久了總是會發黃,特別是鞋邊和鞋底最明顯。網路上流傳許多DIY清潔方法,但哪些真的有效?哪些可能會傷害鞋子?讓我們用專業角度分析給您聽...</p>
+                    <a href="blog-article-4.html" class="read-more">閱讀全文 →</a>
+                </div>
+            </article>
+
+            <!-- 文章 5 -->
+            <article class="blog-card">
+                <div class="blog-image">🚼</div>
+                <div class="blog-content">
+                    <p class="blog-date">2024年11月1日</p>
+                    <h2>安全座椅多久該清洗一次?保護寶寶健康的清潔指南</h2>
+                    <p>安全座椅是寶寶的第二個家,但您知道多久該清洗一次嗎?髒污、食物殘渣、汗水都會累積在座椅上,甚至滋生細菌和塵蟎。本文告訴您專業的清潔時機與方法...</p>
+                    <a href="blog-article-5.html" class="read-more">閱讀全文 →</a>
+                </div>
+            </article>
+
+            <!-- 📝 要新增文章,複製上面的 blog-card 區塊,改標題、日期、內容就可以了! -->
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            <a href="index.html">返回首頁</a> |
+            <a href="index.html#services">服務項目</a> |
+            <a href="index.html#location">聯絡我們</a>
+        </p>
+        <p style="margin-top: 1rem; color: #9ca3af;">
+            © 2024 C.H 精緻洗衣. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>
