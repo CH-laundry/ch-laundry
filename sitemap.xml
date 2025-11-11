@@ -42,4 +42,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- 新增文章 2 -->
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-2.html</loc>
+    <lastmod>2024-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 新增文章 3 -->
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-3.html</loc>
+    <lastmod>2024-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
