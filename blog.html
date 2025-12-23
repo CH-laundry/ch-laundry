@@ -1,533 +1,195 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>洗衣專欄 - C.H 精緻洗衣</title>
-    <meta name="description" content="C.H 精緻洗衣專業洗衣知識、鞋子保養、包包清潔技巧分享">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, 'Microsoft JhengHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-        }
-        
-        /* Navigation */
-        nav {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        /* Header */
-        .blog-header {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .blog-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .blog-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-        }
-        
-        .blog-content {
-            padding: 2rem;
-        }
-        
-        .blog-date {
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .blog-content h2 {
-            color: #1f2937;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .blog-content p {
-            color: #6b7280;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .read-more {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .read-more:hover {
-            background: #1e40af;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #1f2937, #111827);
-            color: white;
-            padding: 3rem 2rem 1rem;
-            margin-top: 4rem;
-            text-align: center;
-        }
-        
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .blog-header h1 { font-size: 2rem; }
-            .blog-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">🧺 C.H 精緻洗衣</a>
-            <ul class="nav-links">
-                <li><a href="index.html">返回首頁</a></li>
-                <li><a href="index.html#services">服務項目</a></li>
-                <li><a href="index.html#pricing">價目表</a></li>
-                <li><a href="index.html#location">聯絡我們</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="blog-header">
-        <h1>📰 洗衣專欄</h1>
-        <p>專業洗衣知識 · 保養秘訣 · 清潔技巧分享</p>
-    </div>
-
-    <div class="container">
-        <div class="blog-grid">
-            <!-- 文章 1 -->
-            <article class="blog-card">
-                <div class="blog-image">👟</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月10日</p>
-                    <h2>如何正確保養名牌球鞋?專業洗鞋師的5大秘訣</h2>
-                    <p>名牌球鞋價格不菲,正確的清潔保養能讓鞋子壽命延長數倍。從 Nike、Adidas 到 New Balance,每種材質都有不同的保養方式。本文分享專業洗鞋師多年經驗...</p>
-                    <a href="blog-article-1.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 2 -->
-            <article class="blog-card">
-                <div class="blog-image">👜</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月8日</p>
-                    <h2>精品包包清潔保養完全指南 - LV、GUCCI、CHANEL</h2>
-                    <p>精品包包是許多人的心頭好,但您知道不同皮革材質需要不同的保養方法嗎?真皮、漆皮、帆布包的清潔方式大不同。讓專業包包保養師告訴您正確的清潔步驟...</p>
-                    <a href="blog-article-2.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 3 -->
-            <article class="blog-card">
-                <div class="blog-image">🏪</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月5日</p>
-                    <h2>板橋洗鞋店怎麼選?選擇專業洗衣店的5大關鍵</h2>
-                    <p>板橋地區洗鞋店眾多,但要如何選擇真正專業的洗鞋店呢?從設備、技術、價格到服務,我們整理出選擇洗鞋店的5大關鍵指標,讓您不再踩雷...</p>
-                    <a href="blog-article-3.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 4 -->
-            <article class="blog-card">
-                <div class="blog-image">✨</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月3日</p>
-                    <h2>白鞋發黃怎麼辦?4個方法讓白鞋恢復如新</h2>
-                    <p>白鞋穿久了總是會發黃,特別是鞋邊和鞋底最明顯。網路上流傳許多DIY清潔方法,但哪些真的有效?哪些可能會傷害鞋子?讓我們用專業角度分析給您聽...</p>
-                    <a href="blog-article-4.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 5 -->
-            <article class="blog-card">
-                <div class="blog-image">🚼</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月1日</p>
-                    <h2>安全座椅多久該清洗一次?保護寶寶健康的清潔指南</h2>
-                    <p>安全座椅是寶寶的第二個家,但您知道多久該清洗一次嗎?髒污、食物殘渣、汗水都會累積在座椅上,甚至滋生細菌和塵蟎。本文告訴您專業的清潔時機與方法...</p>
-                    <a href="blog-article-5.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 6 -->
-            <article class="blog-card">
-                <div class="blog-image">🧥</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月15日</p>
-                    <h2>冬季羽絨衣清洗指南 - 自己洗 vs 送洗完整比較</h2>
-                    <p>冬天到了,衣櫃裡的羽絨衣又要拿出來穿了!但去年收起來的羽絨衣有點髒?想洗又怕洗壞?到底該自己洗還是送洗?板橋專業洗衣店完整分析自己洗vs送洗的優缺點...</p>
-                    <a href="blog-article-6.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 7 -->
-            <article class="blog-card">
-                <div class="blog-image">🏠</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月18日</p>
-                    <h2>窗簾地毯多久洗一次?居家清潔完整指南</h2>
-                    <p>窗簾地毯是家中最容易累積灰塵、塵蟎的地方!但很多人都不知道該多久清洗一次。長期不洗不只影響美觀,更可能影響家人健康,導致過敏、氣喘...</p>
-                    <a href="blog-article-7.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 8 -->
-            <article class="blog-card">
-                <div class="blog-image">🛏️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月20日</p>
-                    <h2>床墊多久該清潔一次?除蟎全攻略守護睡眠品質</h2>
-                    <p>每張床墊可能住著數百萬隻塵蟎!早上起床打噴嚏、鼻塞?可能是床墊該清潔了。專業清潔店教你如何有效除蟎,改善過敏從床墊開始...</p>
-                    <a href="blog-article-8.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 9 -->
-            <article class="blog-card">
-                <div class="blog-image">🧥</div>
-                <div class="blog-content">
-                    <p class="blog-date">2024年11月22日</p>
-                    <h2>皮衣皮褸保養秘訣 - 冬季外套清潔完全指南</h2>
-                    <p>一件好的皮衣可以穿10年以上!但很多人因為不懂保養,讓昂貴的皮衣提早報廢。皮衣該如何清潔?如何預防發霉、龜裂?專業保養秘訣大公開...</p>
-                    <a href="blog-article-9.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 10 -->
-            <article class="blog-card">
-                <div class="blog-image">📦</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年2月1日</p>
-                    <h2>春季衣物換季收納完全指南 - 防潮防蟲秘訣</h2>
-                    <p>春天到了該換季了!台灣氣候潮濕,換季收納要特別注意。錯誤的收納方式可能讓冬衣發霉、變黃、被蟲蛀!專業收納技巧完整公開...</p>
-                    <a href="blog-article-10.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 11 -->
-            <article class="blog-card">
-                <div class="blog-image">❓</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年2月5日</p>
-                    <h2>洗衣常見問題100問 - 專業洗衣店完整解答</h2>
-                    <p>板橋C.H精緻洗衣整理100個最常見的洗衣問題!從鞋子清洗、包包保養、衣物處理到收納技巧,專業洗衣店一次解答所有疑問!</p>
-                    <a href="blog-article-11.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 12 -->
-            <article class="blog-card">
-                <div class="blog-image">🌧️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年2月10日</p>
-                    <h2>雨天鞋子濕了怎麼辦?緊急處理+快速乾燥完整指南</h2>
-                    <p>下雨鞋子濕了怎麼辦?板橋C.H精緻洗衣教你正確緊急處理、快速乾燥方法、不同材質處理技巧,避免發霉、變形、發臭!</p>
-                    <a href="blog-article-12.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 13 -->
-            <article class="blog-card">
-                <div class="blog-image">👔</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年3月15日</p>
-                    <h2>西裝保養終極指南 - 上班族必讀延長壽命秘訣</h2>
-                    <p>西裝怎麼保養?板橋C.H精緻洗衣教你正確清洗、收納、整燙技巧,避免變形、發霉、起毛球,讓西裝穿10年以上!</p>
-                    <a href="blog-article-13.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 14 -->
-            <article class="blog-card">
-                <div class="blog-image">👶</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年4月15日</p>
-                    <h2>嬰兒推車清潔保養完全指南 - 新手爸媽必讀守護寶寶健康</h2>
-                    <p>嬰兒推車怎麼清潔?板橋C.H精緻洗衣教你正確拆洗、除菌、保養技巧,守護寶寶健康,延長推車壽命!</p>
-                    <a href="blog-article-14.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 15 -->
-            <article class="blog-card">
-                <div class="blog-image">☀️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年4月25日</p>
-                    <h2>夏季衣物收納技巧完全指南 - 換季整理防潮防蟲秘訣</h2>
-                    <p>夏天到了該收冬衣了!板橋C.H精緻洗衣教你正確的夏季換季收納技巧,防潮、防蟲、防發霉,讓冬衣明年拿出來還像新的!</p>
-                    <a href="blog-article-15.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 16 -->
-            <article class="blog-card">
-                <div class="blog-image">💪</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年5月5日</p>
-                    <h2>運動服除臭完全攻略 - 健身族必看去除汗臭異味秘訣</h2>
-                    <p>運動服有汗臭味怎麼辦?板橋C.H精緻洗衣教你徹底去除運動服異味的方法,從日常清洗到深層除臭,讓運動服恢復清新!</p>
-                    <a href="blog-article-16.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 17 -->
-            <article class="blog-card">
-                <div class="blog-image">🛏️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年5月15日</p>
-                    <h2>涼被棉被夏季清洗收納完全指南 - 防潮防蟎換季必讀</h2>
-                    <p>夏天到了該洗棉被了!板橋C.H精緻洗衣教你正確的涼被棉被清洗方法、防蟎除菌技巧、換季收納秘訣,讓寢具清潔衛生!</p>
-                    <a href="blog-article-17.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 18 -->
-            <article class="blog-card">
-                <div class="blog-image">🧼</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年5月25日</p>
-                    <h2>毛巾浴巾清洗除菌完全指南 - 去除異味變硬恢復柔軟</h2>
-                    <p>毛巾有異味怎麼辦?板橋C.H精緻洗衣教你正確的毛巾清洗除菌方法、去除異味技巧、恢復柔軟秘訣,讓毛巾乾淨衛生!</p>
-                    <a href="blog-article-18.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 19 -->
-            <article class="blog-card">
-                <div class="blog-image">👕</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年6月5日</p>
-                    <h2>夏季白衣發黃還原技巧完全指南 - 去除汗漬恢復雪白</h2>
-                    <p>白衣服發黃怎麼辦?板橋C.H精緻洗衣教你正確的白衣還原方法、去除汗漬黃斑技巧、預防發黃秘訣,讓白衣恢復雪白!</p>
-                    <a href="blog-article-19.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 20 -->
-            <article class="blog-card">
-                <div class="blog-image">👖</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年6月15日</p>
-                    <h2>牛仔褲清洗保養不褪色完全指南 - 維持原色延長壽命</h2>
-                    <p>牛仔褲怎麼洗不褪色?板橋C.H精緻洗衣教你正確的牛仔褲清洗方法、防止褪色技巧、保養秘訣,讓牛仔褲保持原色延長壽命!</p>
-                    <a href="blog-article-20.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 21 -->
-            <article class="blog-card">
-                <div class="blog-image">🪟</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年6月25日</p>
-                    <h2>居家窗簾清洗除塵完全指南 - 不同材質專業處理</h2>
-                    <p>窗簾怎麼洗?板橋C.H精緻洗衣教你正確的窗簾清洗方法、除塵除蟎技巧、不同材質處理方式,讓窗簾乾淨清新!</p>
-                    <a href="blog-article-21.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 22 -->
-            <article class="blog-card">
-                <div class="blog-image">☀️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年7月5日</p>
-                    <h2>防曬衣抗UV衣物清洗保養完全指南 - 維持防曬效果</h2>
-                    <p>防曬衣怎麼洗?板橋C.H精緻洗衣教你正確的防曬衣清洗方法、維持抗UV效果技巧、保養秘訣,讓防曬衣持續有效防護!</p>
-                    <a href="blog-article-22.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 23 -->
-            <article class="blog-card">
-                <div class="blog-image">🎒</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年7月15日</p>
-                    <h2>背包包包清洗保養完全指南 - 不同材質專業處理</h2>
-                    <p>背包怎麼洗?板橋C.H精緻洗衣教你正確的背包清洗方法、不同材質保養技巧、去污除臭秘訣,讓背包乾淨如新!</p>
-                    <a href="blog-article-23.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 24 -->
-            <article class="blog-card">
-                <div class="blog-image">🛏️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年7月25日</p>
-                    <h2>枕頭棉被夏季清洗完全指南 - 除蟎除臭深層清潔</h2>
-                    <p>枕頭棉被怎麼洗?板橋C.H精緻洗衣教你正確的枕頭棉被清洗方法、除蟎除臭技巧、不同材質處理方式,讓寢具乾淨衛生!</p>
-                    <a href="blog-article-24.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 25 -->
-            <article class="blog-card">
-                <div class="blog-image">❄️</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年8月5日</p>
-                    <h2>夏季涼感衣物清洗保養完全指南 - 維持涼感效果</h2>
-                    <p>涼感衣怎麼洗?板橋C.H精緻洗衣教你正確的涼感衣清洗方法、維持涼感效果技巧、保養秘訣,讓涼感衣持續涼爽舒適!</p>
-                    <a href="blog-article-25.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 26 -->
-            <article class="blog-card">
-                <div class="blog-image">📚</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年8月15日</p>
-                    <h2>開學前書包制服清洗完全指南 - 煥然一新迎接新學期</h2>
-                    <p>開學前怎麼洗書包制服?板橋C.H精緻洗衣教你正確的書包制服清洗方法、去污除臭技巧、整理收納秘訣,讓孩子乾淨開心上學!</p>
-                    <a href="blog-article-26.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 27 -->
-            <article class="blog-card">
-                <div class="blog-image">👶</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年8月25日</p>
-                    <h2>嬰兒衣物清洗消毒完全指南 - 新手爸媽必看</h2>
-                    <p>嬰兒衣服怎麼洗?板橋C.H精緻洗衣教你正確的嬰兒衣物清洗方法、消毒技巧、去污秘訣,讓寶寶衣物乾淨安全!</p>
-                    <a href="blog-article-27.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 28 -->
-            <article class="blog-card">
-                <div class="blog-image">🏆</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年9月5日</p>
-                    <h2>板橋洗衣店推薦完全指南 - 專業洗衣店怎麼選?</h2>
-                    <p>板橋洗衣店推薦!C.H精緻洗衣教你如何選擇專業洗衣店、洗衣店服務項目、價格比較、到府收送,讓你找到最適合的洗衣店!</p>
-                    <a href="blog-article-28.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 29 -->
-            <article class="blog-card">
-                <div class="blog-image">👟</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年9月15日</p>
-                    <h2>板橋洗鞋店推薦完全指南 - 球鞋皮鞋運動鞋專業清潔</h2>
-                    <p>板橋洗鞋店推薦!C.H精緻洗衣專業鞋子清潔,球鞋、皮鞋、運動鞋、名牌鞋都能洗,讓鞋子煥然一新!</p>
-                    <a href="blog-article-29.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 文章 30 -->
-            <article class="blog-card">
-                <div class="blog-image">🧥</div>
-                <div class="blog-content">
-                    <p class="blog-date">2025年9月25日</p>
-                    <h2>板橋羽絨衣清洗推薦完全指南 - 羽絨外套專業清潔保養</h2>
-                    <p>板橋羽絨衣清洗推薦!C.H精緻洗衣專業羽絨衣清洗,不結塊、不變形、蓬鬆如新,讓羽絨衣恢復保暖效果!</p>
-                    <a href="blog-article-30.html" class="read-more">閱讀全文 →</a>
-                </div>
-            </article>
-
-            <!-- 📝 要新增文章,複製上面的 blog-card 區塊,改標題、日期、內容就可以了! -->
-        </div>
-    </div>
-
-    <footer>
-        <p>
-            <a href="index.html">返回首頁</a> |
-            <a href="index.html#services">服務項目</a> |
-            <a href="index.html#location">聯絡我們</a>
-        </p>
-        <p style="margin-top: 1rem; color: #9ca3af;">
-            © 2024 C.H 精緻洗衣. All Rights Reserved.
-        </p>
-    </footer>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ch-laundry.vercel.app/</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-1.html</loc>
+    <lastmod>2024-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-2.html</loc>
+    <lastmod>2024-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-3.html</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-4.html</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-5.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-6.html</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-7.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-8.html</loc>
+    <lastmod>2024-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-9.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-10.html</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-11.html</loc>
+    <lastmod>2025-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-12.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-13.html</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-14.html</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-15.html</loc>
+    <lastmod>2025-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-16.html</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-17.html</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-18.html</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-19.html</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-20.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-21.html</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-22.html</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-23.html</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-24.html</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-25.html</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-26.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-27.html</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-28.html</loc>
+    <lastmod>2025-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-29.html</loc>
+    <lastmod>2025-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ch-laundry.vercel.app/blog-article-30.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
